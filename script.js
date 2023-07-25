@@ -4,6 +4,7 @@ const menuMobile = document.createElement('ul');
 
 menuToggle.addEventListener('click', () => {
   menuNav.classList.toggle('menu-mobile');
+  menuToggle.classList.toggle('open');
 });
 
 window.addEventListener('resize', () => {
@@ -21,4 +22,4 @@ window.addEventListener('load', () => {
   });
 });
 
-menuToggle.parentNode.insertBefore(menuMobile, menuToggle.nextSibling);
+menuToggle.parentNode.insertBefore(menuMobile, menuNav.nextSibling);

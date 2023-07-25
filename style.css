@@ -182,7 +182,6 @@ nav ul li a {
   height: auto;
 }
 
-/* Footer */
 /* Footer styles */
 .footer {
   background-color: #333;
@@ -261,7 +260,6 @@ nav ul li a {
     text-align: left;
     background: #333;
     padding: 20px;
-    
   }
 
   nav ul.menu-mobile li {
@@ -272,7 +270,25 @@ nav ul li a {
   nav ul.menu-mobile li:last-child {
     margin-bottom: 0;
   }
+  .menu-toggle .icon-bar {
+    transition: transform 0.3s ease-in-out;
+  }
 
+  .menu-toggle.open .icon-bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .menu-toggle.open .icon-bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.open .icon-bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  nav ul.menu-mobile.show {
+    transform: translateX(0);
+  }
   .hero {
     padding: 20px;
   }
