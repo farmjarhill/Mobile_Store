@@ -3,10 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon"
-	href="https://previews.123rf.com/images/artsonik/artsonik1609/artsonik160900046/63390996-vector-abstract-logo-template-mobile-phone-shop-smart-phone-store-sign-concept-universal-on-line.jpg"
-	type="image/x-icon">
+    <link
+      rel="icon"
+      href="https://previews.123rf.com/images/artsonik/artsonik1609/artsonik160900046/63390996-vector-abstract-logo-template-mobile-phone-shop-smart-phone-store-sign-concept-universal-on-line.jpg"
+      type="image/x-icon"
+    />
     <title>Mobile Store</title>
+    <script
+      src="https://kit.fontawesome.com/3428f86280.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="style.css" />
   </head>
 
@@ -20,6 +26,7 @@
           <li><a href="#">About</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
+
         <div class="menu-btn">
           <button class="menu-toggle" aria-label="Toggle menu">
             <span class="icon-bar"></span>
@@ -37,7 +44,9 @@
         <a href="#" class="btn">Shop Now</a>
       </section>
 
-      <h2 class="centered-heading" style="margin-top: 1.875rem;">Featured Products</h2>
+      <h2 class="centered-heading" style="margin-top: 30px">
+        Featured Products
+      </h2>
       <section class="products">
         <div class="product">
           <img
@@ -46,7 +55,7 @@
           />
           <h3>iPhone 14 Pro Max</h3>
           <p>Tuyệt đẹp</p>
-          <a href="#" class="btn">View Details</a>
+          <a class="btn">View Details</a>
         </div>
 
         <div class="product">
@@ -56,7 +65,7 @@
           />
           <h3>iPad 12.9-inch Pro Wifi</h3>
           <p>Hoàn hảo</p>
-          <a href="#" class="btn">View Details</a>
+          <a class="btn">View Details</a>
         </div>
 
         <div class="product">
@@ -66,7 +75,7 @@
           />
           <h3>Apple Pencil 2</h3>
           <p>Phê pha</p>
-          <a href="#" class="btn">View Details</a>
+          <a class="btn">View Details</a>
         </div>
 
         <div class="product">
@@ -76,8 +85,13 @@
           />
           <h3>AirTag</h3>
           <p>Đột phá</p>
-          <a href="#" class="btn">View Details</a>
+          <a class="btn">View Details</a>
         </div>
+      </section>
+      <section class="cart">
+        <h2>Giỏ hàng</h2>
+        <ul class="cart-items"></ul>
+        <button class="clear-cart btn">Xóa giỏ hàng</button>
       </section>
     </main>
 
@@ -86,5 +100,27 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const addToCartButtons = document.querySelectorAll(".product .btn");
+        const clearCartButton = document.querySelector(".clear-cart");
+        const cartItemsList = document.querySelector(".cart-items");
+
+        addToCartButtons.forEach((button) => {
+          button.addEventListener("click", (event) => {
+            const product = event.target.closest(".product");
+            const productName = product.querySelector("h3").textContent;
+
+            const cartItem = document.createElement("li");
+            cartItem.textContent = productName;
+            cartItemsList.appendChild(cartItem);
+          });
+        });
+
+        clearCartButton.addEventListener("click", () => {
+          cartItemsList.innerHTML = "";
+        });
+      });
+    </script>
   </body>
 </html>
