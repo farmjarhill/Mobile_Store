@@ -15,8 +15,8 @@ body {
 header {
   background: #333;
   color: #fff;
-  padding: 15px;
-  z-index: 1000;
+  padding-left: 8px;
+  padding-bottom: 10px; 
   width: 100%;
   position: fixed;
   top: 0;
@@ -68,7 +68,7 @@ nav ul li a {
   padding: 40px;
   text-align: center;
   position: relative;
-  margin-top: 100px;
+  margin-top: 70px;
 }
 
 .hero h2 {
