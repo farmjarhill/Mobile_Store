@@ -8,7 +8,7 @@
       href="https://previews.123rf.com/images/artsonik/artsonik1609/artsonik160900046/63390996-vector-abstract-logo-template-mobile-phone-shop-smart-phone-store-sign-concept-universal-on-line.jpg"
       type="image/x-icon"
     />
-    <title>Mobile Store</title>
+    <title>Apple Store</title>
     <script
       src="https://kit.fontawesome.com/3428f86280.js"
       crossorigin="anonymous"
@@ -18,7 +18,7 @@
 
   <body>
     <header class="header-hidden">
-      <h1 class="logo">Mobile Store</h1>
+      <h1 class="logo">Apple Store</h1>
       <nav>
         <ul class="menu">
           <li><a href="#">Home</a></li>
@@ -38,16 +38,25 @@
         </div>
       <br>
       <div class="shopping-cart">
-        <i class="fa-solid fa-cart-shopping" onclick="open-cart"></i>
-        <span id="cart-counter">0</span>
+        <i class="fa-solid fa-cart-shopping" onclick="toggleCartWindow()"></i>
+        <!-- <span id="cart-counter">0</span> -->
+  
+        <!-- Add the cart dropdown container here -->
+        <div class="cart-window-container">
+          <!-- The cart window content will be dynamically populated by JavaScript -->
+          <h>Giỏ hàng trống.</h>
+          <br> <br>
+          <h>Total: 0 USD</h>
+        </div>
       </div>
       </div>
     </div>
+  
     </header>
 
     <main>
       <section class="hero">
-        <h2>Welcome to Mobile Store!</h2>
+        <h2>Welcome to Apple Store!</h2>
         <p>Discover the latest smartphones at the best prices.</p>
         <a href="#" class="btn">Shop Now</a>
       </section>
@@ -103,14 +112,15 @@
         <ul class="cart-items"></ul>
         <p class="total-price">Total: 0 USD</p> <!-- Display total price here -->
         <button class="clear-cart btn">Xóa giỏ hàng</button><br><br>
-        <button class="add-all-to-cart btn">Thêm tất cả vào giỏ hàng</button>
       </section>
+      <!-- Add the cart window script and styles -->
+  <div class="cart-window-container"></div>
     </main>
 
     <footer class="footer">
       <div class="footer-container">
           <div class="footer-info">
-              <h3>Mobile Store</h3>
+              <h3>Apple Store</h3>
               <p>
                   Address: Hanoi, Vietnam<br>
                   Phone: +84 9637871039<br>
@@ -127,7 +137,7 @@
           </div>
       </div>
       <div class="footer-bottom">
-          <p>&copy; 2023 Mobile Store. Bản quyền thuộc về JarHill</p>
+          <p>&copy; 2023 Apple Store. Bản quyền thuộc về JarHill</p>
       </div>
   </footer>
   

@@ -98,6 +98,7 @@ nav ul li a {
   padding: 10px 20px;
   border-radius: 5px;
   text-decoration: none;
+  cursor:pointer;
 }
 /* Shopping Cart */
 .cart {
@@ -312,6 +313,74 @@ nav ul li a {
 .quantity-btn:hover {
   background-color: #e0e0e0; /* Darken the background color on hover */
 }
+
+/* Cart Dropdown */
+.cart-window-container {
+  position: fixed;
+  top: 100px;
+  right: -400px; /* Initially hide the cart window to the right */
+  width: 350px;
+  height: 50%;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  z-index: 999;
+  overflow-y: auto;
+  transition: right 0.3s ease-in-out; /* Add a smooth transition effect */
+  font-family: Arial, sans-serif;
+  color: #000; /* Set the text color to black */
+}
+
+.cart-window-container.open {
+  right: 0; /* Show the cart window when the "open" class is applied */
+  top: 100px;
+}
+
+.cart-window-item {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.cart-window-item:last-child {
+  border-bottom: none; /* Remove the border for the last item */
+}
+
+.cart-window-item span {
+  flex: 1;
+}
+
+.cart-window-item button {
+  background-color: transparent;
+  color: #ff5252; /* Red color for the "X" button */
+  border: none; /* Remove the default button border */
+  padding: 0; /* Remove padding to make the button look like a link */
+  font-size: 18px;
+  cursor: pointer; /* Show a pointer cursor on hover */
+  margin-left: 10px; /* Add spacing between the item name and the "X" button */
+}
+
+.cart-window-item button:hover {
+  text-decoration: underline; /* Underline the "X" button on hover */
+}
+
+.total-price {
+  margin-top: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.cart-window-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 15px;
+}
+
+.cart-window-buttons button {
+  margin-left: 10px;
+}
 /* Media Queries */
 @media screen and (max-width: 768px) {
   .container {
@@ -381,6 +450,9 @@ nav ul li a {
   }
   .cart-items li {
     flex: 0 0 calc(50% - 10px);
+  }
+  .cart-window-container {
+    width: 300px;
   }
 }
 
