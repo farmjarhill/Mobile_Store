@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
             <span>Quantity: ${item.quantity}</span>
             
-            <span>Price: ${item.price} USD</span>
+            <span>Price: ${item.totalPrice} USD</span>
           `;
           cartWindowContainer.appendChild(cartItem);
         });
