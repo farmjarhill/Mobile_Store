@@ -23,3 +23,4 @@ window.addEventListener('load', () => {
 });
 
 menuToggle.parentNode.insertBefore(menuMobile, menuNav.nextSibling);
+
