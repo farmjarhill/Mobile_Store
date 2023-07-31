@@ -1,147 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="icon"
-      href="https://previews.123rf.com/images/artsonik/artsonik1609/artsonik160900046/63390996-vector-abstract-logo-template-mobile-phone-shop-smart-phone-store-sign-concept-universal-on-line.jpg"
-      type="image/x-icon"
-    />
-    <title>Apple Store</title>
-    <script
-      src="https://kit.fontawesome.com/3428f86280.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body>
-    <header class="header-hidden">
-      <h1 class="logo">Apple Store</h1>
-      <nav>
-        <ul class="menu">
-          <li><a href="#">Home</a></li>
-          <li><a href="#products">Products</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Account</a></li>
-        </ul>
-      </nav>
-      <div class="one-row">
-        <div class="menu-btn">
-          <button class="menu-toggle" aria-label="Toggle menu">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon"
+    href="https://previews.123rf.com/images/artsonik/artsonik1609/artsonik160900046/63390996-vector-abstract-logo-template-mobile-phone-shop-smart-phone-store-sign-concept-universal-on-line.jpg"
+    type="image/x-icon" />
+  <title>Apple Store</title>
+  <script src="https://kit.fontawesome.com/3428f86280.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="header hide-on-scroll">
+    <h1 class="logo">Apple Store</h1>
+    <nav>
+      <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Account</a></li>
+      </ul>
+    </nav>
+    <div class="one-row">
+      <div class="menu-btn">
+        <button class="menu-toggle" aria-label="Toggle menu">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
       <br>
       <div class="shopping-cart">
         <i class="fa-solid fa-cart-shopping" onclick="toggleCartWindow()"></i>
         <!-- <span id="cart-counter">0</span> -->
-  
+
         <!-- Add the cart dropdown container here -->
         <div class="cart-window-container">
           <!-- The cart window content will be dynamically populated by JavaScript -->
           <h>Giỏ hàng trống.</h>
           <br> <br>
           <h>Total: 0 USD</h>
+          <br> <br>
+          <!-- Add the "Checkout" button to navigate to the payment page -->
+          <a href="payment.html" class="btn checkout-btn">Checkout</a>
         </div>
-      </div>
       </div>
     </div>
-  
-    </header>
+    </div>
 
-    <main>
-      <section class="hero">
-        <h2>Welcome to Apple Store!</h2>
-        <p>Discover the latest smartphones at the best prices.</p>
-        <a href="#" class="btn">Shop Now</a>
-      </section>
+  </header>
 
-      <h2 class="centered-heading" style="margin-top: 1.875rem" id="products">Featured Products</h2>
-      <section class="products">
-        <div class="product">
-          <img
-            src="https://cdn.tgdd.vn/Products/Images/42/251192/iphone-14-pro-max-vang-thumb-600x600.jpg"
-            alt="Phone 1"
-          />
-          <h3>iPhone 14 Pro Max</h3>
-          <span class="price">1000</span> USD
-          <p>Tuyệt đẹp</p>
-          <a class="btn">Thêm</a>
-        </div>
+  <main>
+    <section class="hero">
+      <h2>Welcome to Apple Store!</h2>
+      <p>Discover the latest smartphones at the best prices.</p>
+      <a href="#" class="btn">Shop Now</a>
+    </section>
 
-        <div class="product">
-          <img
-            src="https://bizweb.dktcdn.net/thumb/1024x1024/100/372/421/products/10049812-may-tinh-bang-ipad-pro-m1-2021-11-inch-wifi-8gb-128gb-mhqt3za-a-bac-1-jpeg-41a4703b-d1b7-40cb-b8b3-0d15101da6d2-439d85e0-5e2e-4223-aa9b-be690a16d12f.jpg?v=1679715786897"
-            alt="Phone 2"
-          />
-          <h3>iPad 12.9-inch Pro Wifi</h3>
-          <span class="price">1000</span> USD
-          <p>Hoàn hảo</p>
-          <a class="btn">Thêm</a>
-        </div>
-
-        <div class="product">
-          <img
-            src="https://cdn.tgdd.vn/Products/Images/1882/237415/but-cam-ung-apple-pencil-2-mu8f2-180722-105300-600x600.jpeg"
-            alt="Apple Pencil"
-          />
-          <h3>Apple Pencil 2</h3>
-          <span class="price">1000</span> USD
-          <p>Phê pha</p>
-          <a class="btn">Thêm</a>
-        </div>
-
-        <div class="product">
-          <img
-            src="https://m.media-amazon.com/images/I/713xuNx00oS._AC_UF1000,1000_QL80_.jpg"
-            alt="Air Tag"
-          />
-          <h3>AirTag</h3>
-          <span class="price">1000</span> USD
-          <p>Đột phá</p>
-          <a class="btn">Thêm</a>
-        </div>
-      </section>
-      <section class="cart">
-        <h2>Giỏ hàng</h2>
-        <ul class="cart-items"></ul>
-        <p class="total-price">Total: 0 USD</p> <!-- Display total price here -->
-        <button class="clear-cart btn">Xóa giỏ hàng</button><br><br>
-      </section>
-      <!-- Add the cart window script and styles -->
-  <div class="cart-window-container"></div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-container">
-          <div class="footer-info">
-              <h3>Apple Store</h3>
-              <p>
-                  Address: Hanoi, Vietnam<br>
-                  Phone: +84 9637871039<br>
-                  Email: pghaothuat@gmail.com
-              </p>
-          </div>
-          <div class="footer-social">
-              <h3>Follow Us</h3>
-              <ul class="social-links">
-                  <li><a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a></li>
-                  <li><a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a></li>
-                  <li><a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a></li>
-              </ul>
-          </div>
+    <h2 class="centered-heading" style="margin-top: 1.875rem" id="products">Featured Products</h2>
+    <section class="products">
+      <div class="product">
+        <img src="https://cdn.tgdd.vn/Products/Images/42/251192/iphone-14-pro-max-vang-thumb-600x600.jpg"
+          alt="Phone 1" />
+        <h3>iPhone 14 Pro Max</h3>
+        <span class="price">1000</span> USD
+        <p>Tuyệt đẹp</p>
+        <a class="btn">Thêm</a>
       </div>
-      <div class="footer-bottom">
-          <p>&copy; 2023 Apple Store. Bản quyền thuộc về JarHill</p>
+
+      <div class="product">
+        <img
+          src="https://bizweb.dktcdn.net/thumb/1024x1024/100/372/421/products/10049812-may-tinh-bang-ipad-pro-m1-2021-11-inch-wifi-8gb-128gb-mhqt3za-a-bac-1-jpeg-41a4703b-d1b7-40cb-b8b3-0d15101da6d2-439d85e0-5e2e-4223-aa9b-be690a16d12f.jpg?v=1679715786897"
+          alt="Phone 2" />
+        <h3>iPad 12.9-inch Pro Wifi</h3>
+        <span class="price">1000</span> USD
+        <p>Hoàn hảo</p>
+        <a class="btn">Thêm</a>
       </div>
+
+      <div class="product">
+        <img
+          src="https://cdn.tgdd.vn/Products/Images/1882/237415/but-cam-ung-apple-pencil-2-mu8f2-180722-105300-600x600.jpeg"
+          alt="Apple Pencil" />
+        <h3>Apple Pencil 2</h3>
+        <span class="price">1000</span> USD
+        <p>Phê pha</p>
+        <a class="btn">Thêm</a>
+      </div>
+
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/713xuNx00oS._AC_UF1000,1000_QL80_.jpg" alt="Air Tag" />
+        <h3>AirTag</h3>
+        <span class="price">1000</span> USD
+        <p>Đột phá</p>
+        <a class="btn">Thêm</a>
+      </div>
+    </section>
+    <section class="cart">
+      <h2>Giỏ hàng</h2>
+      <ul class="cart-items"></ul>
+      <p class="total-price">Total: 0 USD</p> <!-- Display total price here -->
+      <button class="clear-cart btn">Xóa giỏ hàng</button><br><br>
+    </section>
+    <!-- Add the cart window script and styles -->
+    <div class="cart-window-container"></div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-info">
+        <h3>Apple Store</h3>
+        <p>
+          Address: Hanoi, Vietnam<br>
+          Phone: +84 9637871039<br>
+          Email: pghaothuat@gmail.com
+        </p>
+      </div>
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <ul class="social-links">
+          <li><a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2023 Apple Store. Bản quyền thuộc về JarHill</p>
+    </div>
   </footer>
-  
-    <script src="script.js"></script>
-    <script src="script2.js"></script>
-  </body>
+
+  <script src="script.js"></script>
+  <script src="script2.js"></script>
+</body>
+
 </html>
