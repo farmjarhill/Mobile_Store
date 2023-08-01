@@ -385,6 +385,12 @@ nav ul li a {
   .container {
     padding: 10px;
   }
+  .hidden{
+    display:none;
+  }
+  .hide-on-click {
+    display: none;
+  }
   header {
     display: block;
   }

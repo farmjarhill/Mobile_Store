@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon"
+        href="https://previews.123rf.com/images/artsonik/artsonik1609/artsonik160900046/63390996-vector-abstract-logo-template-mobile-phone-shop-smart-phone-store-sign-concept-universal-on-line.jpg"
+        type="image/x-icon" />
+    <title>Apple Store</title>
+    <script src="https://kit.fontawesome.com/3428f86280.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header class="header hide-on-scroll">
+        <h1 class="logo">Apple Store</h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#products">Products</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Account</a></li>
+            </ul>
+        </nav>
+        <div class="one-row">
+            <div class="menu-btn">
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <br>
+            <div class="shopping-cart">
+                <i class="fa-solid fa-cart-shopping" onclick="toggleCartWindow()"></i>
+                <!-- <span id="cart-counter">0</span> -->
+
+                <!-- Add the cart dropdown container here -->
+                <div class="cart-window-container">
+                    <!-- The cart window content will be dynamically populated by JavaScript -->
+                    <h>Giỏ hàng trống.</h>
+                    <br> <br>
+                    <h>Total: 0 USD</h>
+                    <br> <br>
+                    <!-- Add the "Checkout" button to navigate to the payment page -->
+                    <a href="payment.html" class="btn checkout-btn">Checkout</a>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <script src="script.js"></script>
+    <script src="script2.js"></script>
+</body>
+
+</html>
